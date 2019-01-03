@@ -1,2 +1,47 @@
-void main() is
-    
+; A sample Cb program in one file 
+
+; import the power function
+import Math.Pow
+import Math.Abs
+
+pod SquaresArray is
+	
+	; the size of this SquaresArray
+	int size
+
+	; the integer array of squares
+	int[] array
+
+	; constructor for SquaresArray
+	SquaresArray(int size) is
+		; store the size
+		this.size is size
+		; init the array   // iterator replacement here
+		this.array is an int[size]
+		; fill the array
+		for int i is 1 to size + 1 ; by +1
+			; take the square of i and add it to this position
+			int square is Math.Pow(i, 2)
+			array[i] is square
+
+	; Get the square of the given number, assuming it's in the array (ignore boundary-checking for now)
+	int GetSquare(int n) is
+		if n equals 0
+			return 0
+		int toSquare is Math.Abs(n - 1) ; zero-index, as the squares are one-indexed	 
+		return array[toSquare]
+
+
+pod Main is
+	
+	; Main method
+	int Main(String[] args) is
+		; Make a new SquaresArray of size 5
+		SquaresArray squaresArray is a SquaresArray(5)
+		; get the square of 2 
+		int squareOf2 is squaresArray.GetSquare(2)
+		; make sure it's 4
+		if not squareOf2 equals 4
+			return -1
+		; done
+		return 0 
