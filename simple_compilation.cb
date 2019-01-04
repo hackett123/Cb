@@ -1,0 +1,17 @@
+; A simple program to convert to C, using no preprocessing or includes
+pod Main is
+
+	int Main() is
+		int a is 1
+		int b is 2
+		int c is a + b
+
+		return 0
+
+; This should compile to, in simple_compilation.c: 
+; 
+; int main() {
+;	int a = 1;
+;	int b = 2;
+;	int c = a + b;
+;}
