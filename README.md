@@ -1,7 +1,7 @@
-Cb
+# Cb
 
-Mantra
-    - Cb is a pod-oriented language
+## Mantra
+### Cb is a pod-oriented language
         - A pod is a structure containing member fields and methods
         - All variables and methods must be defined in a pod
         - The Main pod is mandatory for a Main() method entry point
@@ -19,7 +19,7 @@ Mantra
     dynamic security clearance system
 
 
-Control Flow: 
+## Control Flow: 
     - For loops: for [(optional variable declaration) and instantiation] to [end condition] by [step change]
         - for int i is 0 to 10 by +1
         - for int i is 100 to vec.y by vec.step
@@ -34,7 +34,7 @@ Control Flow:
 
 
 
-Tokens and Keywords
+## Tokens and Keywords
     - Math operations use the symbol : "+, -, etc", use ^ for power
         - also include trig and log
         - root function : root(x, y) computes x to the 1 / y
@@ -64,7 +64,7 @@ Tokens and Keywords
             returnType funcName(argType0 argName0 argTypeN argNameN) is
     Entry Point for Program is a main function
 
-Arrays
+## Arrays
     - Type[] 
     - Arrays are initialized either with a given size or a list of contents
         - int[] array
@@ -74,9 +74,9 @@ Arrays
     - Array members include: 
         - int length: the length
 
-TODO: Array pod with common functions (a la extention methods) 
+// TODO: Array pod with common functions (a la extention methods) 
     
-Sample Dec :
+## Sample Dec :
         int x is 3;
         int x is 3
         int x = 3;
